@@ -20,13 +20,12 @@ elSection.insertAdjacentElement('afterend', div);
 
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-flatpickr('#datetime-picker', {
-  dateFormat: 'Y-m-d H:i',
+document.addEventListener('DOMContentLoaded', function () {
+  flatpickr('#datetime-picker', {
+    dateFormat: 'Y-m-d H:i', // Формат дати, наприклад "2024-07-17"
+    enableTime: false, // Вимкнути можливість вибору часу (якщо потрібно тільки дату)
+  });
 });
-flatpickr('#datetime-picker', options);
-
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
