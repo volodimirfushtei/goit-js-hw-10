@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let countdownInterval; // Variable to store countdown interval
 
   // Initializing flatpickr with event handlers
-  const datePicker = flatpickr('#datetime-picker', {
+  const Picker = flatpickr('#datetime-picker', {
     enableTime: true,
     dateFormat: 'Y-m-d H:i', // Формат дати і часу: рік-місяць-день година:хвилина
     defaultDate: new Date(), // Дата і час за замовчуванням: поточна дата і час
@@ -81,7 +81,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const now = new Date().getTime();
     let diff = userSelectedDate.getTime() - now;
-
+    iziToast.show({
+      title: 'Timer',
+      message: 'Countdown is started!',
+    });
     // Update the timer every second
     countdownInterval = setInterval(function () {
       const { days, hours, minutes, seconds } = convertMs(diff);
