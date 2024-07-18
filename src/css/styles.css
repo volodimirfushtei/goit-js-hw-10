@@ -78,4 +78,8 @@ button {
   gap: 8px;
   align-items: center;
   padding-left: 156px;
+  margin-bottom: 10px;
+}
+.is-active {
+  color: #16ee3d75;
 }
