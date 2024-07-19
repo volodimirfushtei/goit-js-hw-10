@@ -10,7 +10,27 @@
   <body>
     <section>
       <a href="./index.html">Go home</a>
-      <h1>Welcome to page 2</h1>
+
+      <form class="form">
+        <label class="lable-delay">
+          Delay (ms)
+          <input type="number" name="delay" required />
+        </label>
+
+        <fieldset>
+          <legend>State</legend>
+          <label class="lable-state">
+            <input type="radio" name="state" value="fulfilled" required />
+            Fulfilled
+          </label>
+          <label class="lable-state">
+            <input type="radio" name="state" value="rejected" required />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button type="submit">Create notification</button>
+      </form>
     </section>
     <script type="module" src="./js/2-snackbar.js"></script>
   </body>

@@ -62,15 +62,15 @@ document.addEventListener('DOMContentLoaded', function () {
         iziToast.error({
           title: 'Error',
           message: 'Please choose a date in the future',
+          position: 'topRight',
         });
         button.disabled = true; // Вимкнення кнопки "Start", якщо обрана дата менша за поточну
       } else {
         userSelectedDate = selectedDate; // Збереження обраної користувачем дати
 
         button.disabled = false; // Увімкнення кнопки "Start", якщо обрана дата коректна
-        button.style.background = '#3a18d575';
-        button.style.color = '#e25151';
-        input.style.background = '#16ee3d75';
+        button.style.background = '#4e75ff';
+        button.style.color = '#fff';
       }
     },
   });
@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     iziToast.show({
       title: 'Timer',
       message: 'Countdown is started!',
+      position: 'topRight',
     });
     // Update the timer every second
     countdownInterval = setInterval(function () {
@@ -102,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         iziToast.success({
           title: 'Timer Finished',
           message: 'Countdown timer has ended!',
+          position: 'topRight',
         });
         button.removeAttribute('disabled');
         input.removeAttribute('disabled');
