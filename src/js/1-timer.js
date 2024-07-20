@@ -41,11 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let countdownInterval;
 
   const Picker = flatpickr('#datetime-picker', {
-    enableTime: true,
-    dateFormat: 'Y-m-d H:i',
-    defaultDate: new Date(),
-    minuteIncrement: 1,
-
     onClose(selectedDates) {
       const selectedDate = selectedDates[0];
       const currentDate = new Date();
