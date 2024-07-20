@@ -1,3 +1,5 @@
+import iconErr from '../img/bi_x-octagon.svg';
+
 const form = document.querySelector('.form');
 const inputDelay = document.querySelector('[name=delay]');
 const inputState = document.querySelector('[name=state]');
@@ -63,7 +65,7 @@ form.addEventListener('submit', function (event) {
       messageColor: `#fff`,
       backgroundColor: `#ffa000`,
       titleColor: `#fff`,
-      iconUrl: `../img/bi_exclamation-triangle.svg`,
+      iconUrl: `${iconErr}`,
     });
     return;
   }
@@ -96,7 +98,7 @@ form.addEventListener('submit', function (event) {
         backgroundColor: '#ef4040',
         messageColor: `#fff`,
         titleColor: `#fff`,
-        iconUrl: `../img/bi_x-octagon.svg`,
+        iconUrl: `${iconErr}`,
       });
     })
     .finally(() => {
