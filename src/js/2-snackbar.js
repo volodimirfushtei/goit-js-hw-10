@@ -40,51 +40,68 @@ labelDelay.style.cssText = `display: flex;
      margin-left: 40px`;
 
 import iziToast from 'izitoast';
-// Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
 iziToast.info({
   title: 'Hallo!',
   message: 'Wellcome!',
   position: 'topRight',
+  backgroundColor: '#09f',
+  messageColor: `#fff`,
+  titleColor: `#fff`,
+  iconUrl: `../img/bi_bell.svg`,
 });
 
-// Додаємо обробник події сабміту форми
 form.addEventListener('submit', function (event) {
-  event.preventDefault(); // Зупиняємо стандартну поведінку форми
+  event.preventDefault();
 
   const delay = parseInt(inputDelay.value, 10);
-  // Створюємо новий проміс
+  if (isNaN(delay)) {
+    iziToast.error({
+      title: 'Caution',
+      message: 'You forgot important data',
+      position: 'topRight',
+      messageColor: `#fff`,
+      backgroundColor: `#ffa000`,
+      titleColor: `#fff`,
+      iconUrl: `../img/bi_exclamation-triangle.svg`,
+    });
+    return;
+  }
   const promise = new Promise((resolve, reject) => {
-    // Імітація асинхронної роботи (наприклад, виконання запиту на сервер)
     setTimeout(() => {
       if (inputState.checked) {
-        resolve(`✅ Fulfilled promise in ${delay}ms`); // Вирішуємо проміс успішно
+        resolve(`Fulfilled promise in ${delay}ms`);
       } else {
-        reject(`❌ Rejected promise in ${delay}ms`); // Відхиляємо проміс
+        reject(`Illegal operation`);
       }
-    }, delay); // Час затримки: 2 секунди (2000 мілісекунд)
+    }, delay);
   });
-
-  // Обробляємо результат промісу
   promise
     .then(result => {
-      // Виводимо успішне повідомлення за допомогою iziToast
       iziToast.success({
-        title: 'Success',
+        title: 'OK',
         message: result,
         position: 'topRight',
+        backgroundColor: '#59a10d',
+        messageColor: `#fff`,
+        titleColor: `#fff`,
+        iconUrl: `../img/bi_check2-circle.svg`,
       });
     })
     .catch(error => {
-      // Виводимо повідомлення про помилку за допомогою iziToast
       iziToast.error({
         title: 'Error',
         message: error,
         position: 'topRight',
+        backgroundColor: '#ef4040',
+        messageColor: `#fff`,
+        titleColor: `#fff`,
+        iconUrl: `../img/bi_x-octagon.svg`,
       });
     })
     .finally(() => {
       inputDelay.value = '';
-      inputState.checked = false;
+      document.querySelector('input[value="fulfilled"]').checked = false;
+      document.querySelector('input[value="rejected"]').checked = false;
     });
 });
