@@ -1,4 +1,4 @@
-import"./assets/modulepreload-polyfill-3cfb730f.js";/* empty css                      */import{i as t}from"./assets/vendor-77e16229.js";const s=document.querySelector(".form"),i=document.querySelector("[name=delay]"),n=document.querySelector("[name=state]"),a=document.querySelector("fieldset");document.querySelector("button");const c=document.querySelector(".lable-delay"),f=document.querySelector(".lable-state");i.style.cssText=`border: 1px solid #808080;
+import"./assets/modulepreload-polyfill-3cfb730f.js";/* empty css                      */import{i as t}from"./assets/vendor-77e16229.js";const l="/goit-js-hw-10/assets/bi_x-octagon-4f06a8ee.svg",n=document.querySelector(".form"),i=document.querySelector("[name=delay]"),c=document.querySelector("[name=state]"),a=document.querySelector("fieldset");document.querySelector("button");const f=document.querySelector(".lable-delay"),p=document.querySelector(".lable-state");i.style.cssText=`border: 1px solid #808080;
 border-radius: 4px;
 width: 360px;
 height: 40px;
@@ -6,7 +6,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.04em;
-color: #2e2f42;`;f.style.cssText=`font-weight: 400;
+color: #2e2f42;`;p.style.cssText=`font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 color: #2e2f42;`;a.style.cssText=`border-radius: 4px;
@@ -20,10 +20,10 @@ justify-content: center;
 flex-direction: row;
 gap: 48px;
 padding: 0px;
-margin-left: 40px;`;c.style.cssText=`display: flex;
+margin-left: 40px;`;f.style.cssText=`display: flex;
     margin-bottom: 16px;
     margin-top: 40px;
     font-size: 16px;
      flex-direction: column;
-     margin-left: 40px`;t.info({title:"Hallo!",message:"Wellcome!",position:"topRight",backgroundColor:"#09f",messageColor:"#fff",titleColor:"#fff",iconUrl:"../img/bi_bell.svg"});s.addEventListener("submit",function(l){l.preventDefault();const o=parseInt(i.value,10);if(isNaN(o)){t.error({title:"Caution",message:"You forgot important data",position:"topRight",messageColor:"#fff",backgroundColor:"#ffa000",titleColor:"#fff",iconUrl:"../img/bi_exclamation-triangle.svg"});return}new Promise((e,r)=>{setTimeout(()=>{n.checked?e(`Fulfilled promise in ${o}ms`):r("Illegal operation")},o)}).then(e=>{t.success({title:"OK",message:e,position:"topRight",backgroundColor:"#59a10d",messageColor:"#fff",titleColor:"#fff",iconUrl:"../img/bi_check2-circle.svg"})}).catch(e=>{t.error({title:"Error",message:e,position:"topRight",backgroundColor:"#ef4040",messageColor:"#fff",titleColor:"#fff",iconUrl:"../img/bi_x-octagon.svg"})}).finally(()=>{i.value="",document.querySelector('input[value="fulfilled"]').checked=!1,document.querySelector('input[value="rejected"]').checked=!1})});
+     margin-left: 40px`;t.info({title:"Hallo!",message:"Wellcome!",position:"topRight",backgroundColor:"#09f",messageColor:"#fff",titleColor:"#fff",iconUrl:"../img/bi_bell.svg"});n.addEventListener("submit",function(r){r.preventDefault();const o=parseInt(i.value,10);if(isNaN(o)){t.error({title:"Caution",message:"You forgot important data",position:"topRight",messageColor:"#fff",backgroundColor:"#ffa000",titleColor:"#fff",iconUrl:`${l}`});return}new Promise((e,s)=>{setTimeout(()=>{c.checked?e(`Fulfilled promise in ${o}ms`):s("Illegal operation")},o)}).then(e=>{t.success({title:"OK",message:e,position:"topRight",backgroundColor:"#59a10d",messageColor:"#fff",titleColor:"#fff",iconUrl:"../img/bi_check2-circle.svg"})}).catch(e=>{t.error({title:"Error",message:e,position:"topRight",backgroundColor:"#ef4040",messageColor:"#fff",titleColor:"#fff",iconUrl:`${l}`})}).finally(()=>{i.value="",document.querySelector('input[value="fulfilled"]').checked=!1,document.querySelector('input[value="rejected"]').checked=!1})});
 //# sourceMappingURL=commonHelpers2.js.map
