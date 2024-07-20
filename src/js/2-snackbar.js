@@ -1,4 +1,7 @@
 import iconErr from '../img/bi_x-octagon.svg';
+import iconBell from '../img/bi_bell.svg';
+import iconSuc from '../img/bi_check2-circle.svg';
+import iconCau from '../img/bi_exclamation-triangle.svg';
 
 const form = document.querySelector('.form');
 const inputDelay = document.querySelector('[name=delay]');
@@ -50,7 +53,7 @@ iziToast.info({
   backgroundColor: '#09f',
   messageColor: `#fff`,
   titleColor: `#fff`,
-  iconUrl: `../img/bi_bell.svg`,
+  iconUrl: `${iconBell}`,
 });
 
 form.addEventListener('submit', function (event) {
@@ -65,7 +68,7 @@ form.addEventListener('submit', function (event) {
       messageColor: `#fff`,
       backgroundColor: `#ffa000`,
       titleColor: `#fff`,
-      iconUrl: `${iconErr}`,
+      iconUrl: `${iconCau}`,
     });
     return;
   }
@@ -87,7 +90,7 @@ form.addEventListener('submit', function (event) {
         backgroundColor: '#59a10d',
         messageColor: `#fff`,
         titleColor: `#fff`,
-        iconUrl: `../img/bi_check2-circle.svg`,
+        iconUrl: `${iconSuc}`,
       });
     })
     .catch(error => {
