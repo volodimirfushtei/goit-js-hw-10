@@ -1,4 +1,4 @@
-import{i as r}from"./assets/bi_x-octagon-ddd250c8.js";/* empty css                      */import{i as t}from"./assets/vendor-77e16229.js";const n="/goit-js-hw-10/assets/bi_bell-28eb2f9b.svg",c="/goit-js-hw-10/assets/bi_check2-circle-286069d5.svg",a="/goit-js-hw-10/assets/bi_exclamation-triangle-abfc0c5e.svg",f=document.querySelector(".form"),i=document.querySelector("[name=delay]"),u=document.querySelector("[name=state]"),p=document.querySelector("fieldset");document.querySelector("button");const d=document.querySelector(".lable-delay"),m=document.querySelector(".lable-state");i.style.cssText=`border: 1px solid #808080;
+import{i as n}from"./assets/bi_x-octagon-ddd250c8.js";/* empty css                      */import{i as o}from"./assets/vendor-77e16229.js";const c="/goit-js-hw-10/assets/bi_bell-28eb2f9b.svg",a="/goit-js-hw-10/assets/bi_check2-circle-286069d5.svg",f="/goit-js-hw-10/assets/bi_exclamation-triangle-abfc0c5e.svg",u=document.querySelector(".form"),i=document.querySelector("[name=delay]");document.querySelector("[name=state]");const l=document.querySelector("fieldset");document.querySelector("button");const d=document.querySelector(".lable-delay"),m=document.querySelector(".lable-state");i.style.cssText=`border: 1px solid #808080;
 border-radius: 4px;
 width: 360px;
 height: 40px;
@@ -9,7 +9,7 @@ letter-spacing: 0.04em;
 color: #2e2f42;`;m.style.cssText=`font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
-color: #2e2f42;`;p.style.cssText=`border-radius: 4px;
+color: #2e2f42;`;l.style.cssText=`border-radius: 4px;
 stroke-width: 1px;
 stroke: #808080;
 width: 360px;
@@ -25,5 +25,5 @@ margin-left: 40px;`;d.style.cssText=`display: flex;
     margin-top: 40px;
     font-size: 16px;
      flex-direction: column;
-     margin-left: 40px`;t.info({title:"Hallo!",message:"Wellcome!",position:"topRight",backgroundColor:"#09f",messageColor:"#fff",titleColor:"#fff",iconUrl:`${n}`});f.addEventListener("submit",function(l){l.preventDefault();const o=parseInt(i.value,10);if(isNaN(o)){t.error({title:"Caution",message:"You forgot important data",position:"topRight",messageColor:"#fff",backgroundColor:"#ffa000",titleColor:"#fff",iconUrl:`${a}`});return}new Promise((e,s)=>{setTimeout(()=>{u.checked?e(`Fulfilled promise in ${o}ms`):s("Illegal operation")},o)}).then(e=>{t.success({title:"OK",message:e,position:"topRight",backgroundColor:"#59a10d",messageColor:"#fff",titleColor:"#fff",iconUrl:`${c}`})}).catch(e=>{t.error({title:"Error",message:e,position:"topRight",backgroundColor:"#ef4040",messageColor:"#fff",titleColor:"#fff",iconUrl:`${r}`})}).finally(()=>{i.value="",document.querySelector('input[value="fulfilled"]').checked=!1,document.querySelector('input[value="rejected"]').checked=!1})});
+     margin-left: 40px`;o.info({title:"Hallo!",message:"Wellcome!",position:"topRight",backgroundColor:"#09f",messageColor:"#fff",titleColor:"#fff",iconUrl:`${c}`});u.addEventListener("submit",function(r){r.preventDefault();const t=parseInt(i.value,10);if(isNaN(t)){o.error({title:"Caution",message:"You forgot important data",position:"topRight",messageColor:"#fff",backgroundColor:"#ffa000",titleColor:"#fff",iconUrl:`${f}`});return}new Promise((e,s)=>{setTimeout(()=>{l.querySelector('input[type="radio"]:checked').value==="fulfilled"?e(`Fulfilled promise in ${t}ms`):s(`Rejected promise in ${t}ms`)},t)}).then(e=>{o.success({title:"OK",message:e,position:"topRight",backgroundColor:"#59a10d",messageColor:"#fff",titleColor:"#fff",iconUrl:`${a}`})}).catch(e=>{o.error({title:"Error",message:e,position:"topRight",backgroundColor:"#ef4040",messageColor:"#fff",titleColor:"#fff",iconUrl:`${n}`})}).finally(()=>{i.value="",document.querySelector('input[value="fulfilled"]').checked=!1,document.querySelector('input[value="rejected"]').checked=!1})});
 //# sourceMappingURL=commonHelpers2.js.map
