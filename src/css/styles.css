@@ -26,9 +26,11 @@ div input {
   padding: 0px 0px 0px 16px;
   outline: none;
 }
+
 div input:hover {
   border: 1px solid #000;
 }
+
 button[data-start] {
   border-radius: 8px;
   border: none;
@@ -52,9 +54,11 @@ button[data-start]:hover {
   background-color: #6c8cff;
   color: #fff;
 }
+
 div input:focus {
   border: 1px solid #4e75ff;
 }
+
 .timer {
   width: 346px;
   height: 72px;
@@ -66,6 +70,7 @@ div input:focus {
   margin-top: 32px;
   padding-left: 156px;
 }
+
 .value {
   font-weight: 400;
   font-size: 40px;
@@ -73,15 +78,19 @@ div input:focus {
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
-.label {
+
+.lable-delay input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.04em;
   color: #2e2f42;
-  border-radius: 4px;
-  width: 272px;
-  height: 40px;
 }
+
 .wrapper {
   display: flex;
   margin-top: 36px;
@@ -117,4 +126,35 @@ legend {
 }
 button:hover {
   background: #6c8cff;
+}
+
+.lable-state {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
+
+fieldset {
+  border-radius: 4px;
+  stroke-width: 1px;
+  stroke: #808080;
+  width: 360px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 48px;
+  padding: 0px;
+  margin-left: 40px;
+}
+
+.lable-delay {
+  display: flex;
+  margin-bottom: 16px;
+  margin-top: 40px;
+  font-size: 16px;
+  flex-direction: column;
+  margin-left: 40px;
 }
