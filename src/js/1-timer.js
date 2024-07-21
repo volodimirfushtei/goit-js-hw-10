@@ -21,6 +21,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import iconErr from '../img/bi_x-octagon.svg';
+
 let userSelectedDate = null;
 let countdownInterval;
 function handleDateSelection(selectedDates) {
@@ -50,8 +51,7 @@ const options = {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
-  onClose: handleDateSelection, // Встановлення функції обробки на події закриття
-  dateFormat: 'Y-m-d H:i',
+  onClose: handleDateSelection,
 };
 
 const picker = flatpickr('#datetime-picker', options);
