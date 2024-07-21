@@ -74,10 +74,13 @@ form.addEventListener('submit', function (event) {
   }
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (inputState.checked) {
+      if (
+        fieldset.querySelector('input[type="radio"]:checked').value ===
+        'fulfilled'
+      ) {
         resolve(`Fulfilled promise in ${delay}ms`);
       } else {
-        reject(`Illegal operation`);
+        reject(`Rejected promise in ${delay}ms`);
       }
     }, delay);
   });
