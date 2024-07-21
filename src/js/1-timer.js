@@ -1,3 +1,4 @@
+import iconErr from '../img/bi_x-octagon.svg';
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -53,8 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
       if (selectedDate < currentDate) {
         iziToast.error({
           title: 'Error',
-          message: 'Please choose a date in the future',
+          message: 'Illegal operation',
           position: 'topRight',
+          backgroundColor: '#ef4040',
+          messageColor: `#fff`,
+          titleColor: `#fff`,
+          iconUrl: `${iconErr}`,
         });
         button.disabled = true;
       } else {
