@@ -45,9 +45,9 @@ form.addEventListener('submit', function (event) {
         fieldset.querySelector('input[type="radio"]:checked').value ===
         'fulfilled'
       ) {
-        resolve(`Fulfilled promise in ${delay}ms`);
+        resolve(`✅ Fulfilled promise in ${delay}ms`);
       } else {
-        reject(`Rejected promise in ${delay}ms`);
+        reject(`❌ Rejected promise in ${delay}ms`);
       }
     }, delay);
   });
@@ -68,9 +68,10 @@ form.addEventListener('submit', function (event) {
         title: 'Error',
         message: error,
         position: 'topRight',
-        backgroundColor: '#ef4040',
+        backgroundColor: `#ef0004`,
         messageColor: `#fff`,
         titleColor: `#fff`,
+        iconColor: `#fff`,
         iconUrl: `${iconErr}`,
       });
     })
