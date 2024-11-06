@@ -19,6 +19,7 @@ iziToast.info({
   position: 'topRight',
   backgroundColor: '#09f',
   messageColor: `#fff`,
+  maxWidth: '432px',
   titleColor: `#fff`,
   iconUrl: `${iconBell}`,
 });
